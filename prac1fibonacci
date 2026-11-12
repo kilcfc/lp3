@@ -1,0 +1,35 @@
+#NON RECURSIVE 
+
+n = int(input("Enter number of terms: "))
+
+a = 0
+b = 1
+
+print("Fibonacci Series:")
+
+for i in range(n):
+    print(a, end=" ")
+    c = a + b
+    a = b
+    b = c
+
+#RECURSIVE
+
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+n = int(input("Enter number of terms: "))
+
+print("Fibonacci Series:")
+
+for i in range(n):
+    print(fibonacci(i), end=" ")
+
+
+#Method	       Time Complexity	Space Complexity
+Non-Recursive     	O(n)	             O(1)
+Recursive          	O(2ⁿ)              O(n)
+
